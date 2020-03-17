@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper  namespace="com.cssl.dao.UsersDao">
+
+<insert id="insertUser" keyColumn="uid" keyProperty="uid" parameterType="Users">
+		insert into users(username,password) values(#{username},#{password})
+	</insert>
+
+
+<select id="AddSelect"  parameterType="String" resultType="users">
+  SELECT * FROM users where username=#{username}
+  and password=#{password}
+</select>
+
+   <select id="addlist"  parameterType="String" resultType="users">
+         select * from  users
+   </select>
+
+
+</mapper>

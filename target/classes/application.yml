@@ -1,0 +1,34 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demotwo
+    
+    
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+      
+      
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(d7R9yJLG4gAUC9UlovVCnX2XpOH3UuvYR4oPsKrWGfMxDJzZqbLVdTSmTj5oLio2)
+    username: ENC(582sDLawMS+vdXlmI5zR0A==)
+    password: ENC(Wx8ZCI22ztwKFPCyLdxmKA==)
+    
+mybatis:
+  type-aliases-package: com.cssl.pojo
+  configuration:
+    use-generated-keys: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl    
+
+#分页配置合理区间   
+pagehelper:
+  reasonable: true
+
+#密钥
+jasypt:
+  encryptor:
+    password: KillerLth2
